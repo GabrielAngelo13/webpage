@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, intial-scale-1.0">
+    <title> Gab</title>
+    <link rel="stylesheet" href="webstyle.css">
+    <script src="https://kit.fontawesome.com/a05270cab0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logoname.png" class="Logo">
+                <ul>
+                    <li><a href="#header"> Home</a></li>
+                    <li><a href="#about"> About</a></li>
+                    <li><a href="#services"> Skills</a></li>
+                    <li><a href="#portfolio"> Portfolio</a></li>
+                    <li><a href="#Contact"> Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring full-stack Developer </p>
+                <h1>Hi, I'm <span>Gabriel</span> Angelo </h1>
+            </div>
+        </div>
+    </div>
+    <!-----------------about--------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="selfie.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p> I am a BSIT student major in Mobile and Internet Technologies. I am humorous person, family-oriented guy. I love to explore and create innovative ideas
+                    and I also play music and guitar. In my senior highschool days I play basketball and chess as my sports and I am involved in speech choir club which
+                     involves acting and singing. My parents and my auncle pushed me into this course since I know logic and some arithmetic. It was hard but it was fun. 
+                    I already got into group projects like bus scheduling system using java. I already developed some systems in python like the grade calculator with an interface and mobile chatting app in our mobile programming
+                    subject using java.</p>
+
+                    <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Talents & Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                  </div>
+                  <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li> <span>Playing Musical Instruments</span><br>Playing guitar </li>
+                        <li> <span>Emcee</span><br>hosting events </li>
+                        <li> <span>Programming</span><br>Web, Mobile and SQL  </li>
+                    </ul>
+                  </div> 
+                  <div class="tab-contents" id="education">
+                    <ul>
+                        <li> <span>2006-2015</span><br>Newland Center For Education: Graduated Valedictorian </li>
+                        <li> <span>2015-2019</span><br>St.Joseph College of Novaliches inc.  </li>
+                        <li> <span>2019-2021</span><br>Our Lady of Lourdes Catholic School: With honors </li>
+                        <li> <span>2021-2022</span><br>National University Fairview: BS Accountancy</li>
+                    </ul>
+                  </div>   
+            </div>
+        </div>
+    </div>
+<!-------------skills---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Skills</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Dev</h2>
+                <p>Web programming using html, css and javascript</p>
+                <a href="#"> learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-java"></i>
+                <h2>Java</h2>
+                <p>Fundamentals of java language</p>
+                <a href="#"> learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>SQL</h2>
+                <p>basics and Fundamentals of Database using SQL</p>
+                <a href="#"> learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-linux"></i>
+                <h2>Linux</h2>
+                <p>Has experience in Linux Shell</p>
+                <a href="#"> learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Python</h2>
+                <p>has understanding and experience using Python language</p>
+                <a href="#"> learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------portfolio------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Grades-calculator.png">
+                <div class="layer">
+                    <h3>Grade calculator</h3>
+                    <p>Calculates failing and passed grades</p>
+                    <a href="#"><i class="fa-solid fa-calculator"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Chatapp.png">
+                <div class="layer">
+                    <h3>Chat app</h3>
+                    <p>App that connects people</p>
+                    <a href="#"><i class="fa-regular fa-comment"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Bus.png">
+                <div class="layer">
+                    <h3>Bus Scheduling System</h3>
+                    <p>App that books your schedule in a bus</p>
+                    <a href="#"><i class="fa-solid fa-bus"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> contact@gabriel.angelo100@yahoo.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/gabrielangelo.barallas.7" ><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/icedoutgabby/" ><i class="fa-brands fa-instagram-square"></i></a>
+                    <a href="" ><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="Email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> <i class="fa-regular fa-copyright"></i> copyright@Gab.</p>
+        </div>
+    </div>
+</div>
+
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>
+ 
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxfKLnTL7BJ7CnqKSMdo3hWh9FPUldFUFDJO45kSLbWVlxW7sIgKXvxm6GNST34zAo/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response =>{
+        msg.innerHTML="Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+   
+</body>
+</html>

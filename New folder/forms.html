@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Form</title>
+</head>
+<body>
+
+<h2>HTML Form</h2>
+
+<form id="myForm">
+    <label for="userInput">First name:</label>
+    <input type="text" id="userInput" name="fname" value=""><br><br>
+
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" value=""><br><br>
+
+    <label for="Age">Age:</label>
+    <input type="text" id="Age" name="Age" value=""><br><br>
+
+    <label for="sex">Sex:</label>
+    <input type="radio" id="male" name="sex" value="Male">Male
+    <input type="radio" id="female" name="sex" value="Female">Female<br><br>
+
+    <p>Address:</p>
+    <label for="blk">Blk/Lot:</label><br>
+    <input type="text" id="blk" name="Address" value=""><br>
+
+    <label for="strt">Street name:</label>
+    <input type="text" id="strt" name="Address" value=""><br>
+
+    <label for="Subdivision">Subdivision:</label>
+    <input type="text" id="Subdivision" name="Address" value=""><br>
+
+    <label for="brgy">Barangay:</label>
+    <input type="text" id="brgy" name="Address" value=""><br><br>
+
+    <label for="City">City/Municipality:</label><br>
+    <input type="text" id="City" name="Address" value=""><br>
+
+    <label for="prov">Province:</label>
+    <input type="text" id="prov" name="Address" value=""><br>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="Address" value=""><br>
+
+    <p>Places to visit:</p>
+    <input type="checkbox" id="place1" name="favorite-places[]" value="Baguio">
+    <label for="place1">Baguio</label><br>
+
+    <input type="checkbox" id="place2" name="favorite-places[]" value="Tagaytay">
+    <label for="place2">Tagaytay</label><br>
+
+    <input type="checkbox" id="place3" name="favorite-places[]" value="Boracay">
+    <label for="place3">Boracay</label><br>
+
+    <input type="checkbox" id="place4" name="favorite-places[]" value="QMC">
+    <label for="place4">QMC</label><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var Fname = document.getElementById('userInput').value;
+        var lname = document.getElementById('lname').value;
+        var Age = document.getElementById('Age').value;
+        var sex = document.querySelector('input[name="sex"]:checked');
+        var blk = document.getElementById('blk').value;
+        var street = document.getElementById('strt').value;
+        var subdivision = document.getElementById('Subdivision').value;
+        var barangay = document.getElementById('brgy').value;
+        var city = document.getElementById('City').value;
+        var province = document.getElementById('prov').value;
+        var country = document.getElementById('country').value;
+        var favoritePlaces = document.querySelectorAll('input[name="favorite-places[]"]:checked');
+
+        var message = 'First name: ' + Fname + '\n';
+        message += 'Last Name: ' + lname + '\n';
+        message += 'Age: ' + Age + '\n';
+        message += 'Sex: ' + (sex ? sex.value : 'Not specified') + '\n';
+        message += 'Address:\n';
+        message += 'Block: ' + blk + '\n';
+        message += 'Street: ' + street + '\n';
+        message += 'Subdivision: ' + subdivision + '\n';
+        message += 'Barangay: ' + barangay + '\n';
+        message += 'City: ' + city + '\n';
+        message += 'Province: ' + province + '\n';
+        message += 'Country: ' + country + '\n';
+
+        if (favoritePlaces.length > 0) {
+            message += 'Places to visit ' + Array.from(favoritePlaces).map(function(checkbox) {
+                return checkbox.value;
+            }).join(', ') + '\n';
+        } else {
+            message += 'Favorite Places: No places selected\n';
+        }
+
+        alert(message);
+    });
+</script>
+
+</body>
+</html>
